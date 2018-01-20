@@ -31,6 +31,7 @@ class LandingPage extends React.Component {
                     financial goal. The optic is to make the organizations save money while they give back to their
                     users in a form of social rewarding at an affordable price.</p>
                 <h2><strong>Here is an example</strong></h2>
+                <img src="../Resources/garnier.jpg" alt="David, un utilisateur quelconque">
                 <p>David is studying Computer Engineering at Polytechnique Montreal and subscribed to Hackavillage a
                     year ago. He uses a BIXI from the non-profit organization every day possible to go to school. While
                     he gains points and rewards like rebate on its monthly pass for doing so, he helps the city solve
