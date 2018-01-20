@@ -1,11 +1,26 @@
 import * as React from 'react';
-import './Styles/App.css';
+import Drawer     from './Drawer';
 
-class MemberSpace extends React.Component {
+interface MemberState {
+    title: string;
+}
+
+interface MemberProps {
+
+}
+
+class MemberSpace extends React.Component<MemberProps, MemberState> {
+    constructor(props: MemberProps) {
+        super(props);
+        this.state = {
+            title: 'Home'
+        };
+    }
+
     render() {
         return (
             <div className="temp">
-                <p>Ceci est un patron</p>
+                <Drawer title={this.state.title} />
             </div>
         );
     }
