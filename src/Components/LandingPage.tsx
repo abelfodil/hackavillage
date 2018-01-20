@@ -46,8 +46,6 @@ class LandingPage extends React.Component {
                 <p>We are a small team who wants to innovate and create an intuitive and reactive product. We have a
                     dynamic environment of thinking that aims into helping cities with their contemporary problems so
                     that the urban life of tomorrow is one that is in continuous improvement.</p>
-
-
             </div>
         );
     }
