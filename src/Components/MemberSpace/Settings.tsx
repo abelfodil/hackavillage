@@ -1,7 +1,7 @@
 import * as React from 'react';
 import './Styles/App.css';
 
-class Template extends React.Component {
+class Settings extends React.Component {
     render() {
         return (
             <div className="temp">
@@ -11,4 +11,4 @@ class Template extends React.Component {
     }
 }
 
-export default Template;
+export default Settings;
