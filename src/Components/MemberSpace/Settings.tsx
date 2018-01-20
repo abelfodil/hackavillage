@@ -5,7 +5,7 @@ class Settings extends React.Component {
     render() {
         return (
             <div className="temp">
-                <p>Ceci est un patron</p>
+                <p>caca</p>
             </div>
         );
     }
