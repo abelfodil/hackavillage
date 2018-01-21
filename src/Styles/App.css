@@ -3,19 +3,23 @@
 }
 
 .App {
-	text-align: center;
 }
 
-.App-logo {
-	animation: App-logo-spin infinite 20s linear;
-	height: 80px;
+.David, .David img{
+	width: 250px !important;
+	height: 250px !important;
 }
 
-.App-header {
-	background-color: #222;
-	height: 150px;
-	padding: 20px;
-	color: white;
+.David{
+	left: calc(50% - 125px);
+}
+
+.Progress > div{
+	height: 15px !important;
+	position: relative;
+	width: 50%;
+	overflow: hidden;
+	animation: start .3s ease-in;
 }
 
 .App-title {
@@ -26,16 +30,11 @@
 	font-size: large;
 }
 
-@keyframes App-logo-spin {
-	from {
-		transform: rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg);
-	}
-}
-
 main {
 	margin-top: var(--spacing);
+	margin-left: auto !important;
+	margin-right: auto !important;
+	text-align: justify;
+	max-width: 800px;
 }
 

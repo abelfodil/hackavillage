@@ -67,8 +67,7 @@ class Login extends React.Component<LoginProps, LoginState> {
     render() {
         return (
             <main>
-                <span>Login</span>
-                <br/>
+                <h1>Login</h1>
                 <FormControl error={this.state.emailError}>
                     <InputLabel htmlFor="name-simple">Email</InputLabel>
                     <Input

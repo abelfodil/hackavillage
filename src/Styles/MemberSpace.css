@@ -6,7 +6,6 @@
 	transition: width 225ms;
 }
 
-.appbar-title {
+main {
 	text-align: center;
-	width: 100%;
 }
