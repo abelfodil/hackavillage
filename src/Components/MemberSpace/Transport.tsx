@@ -1,5 +1,4 @@
 import * as React from 'react';
-import './Styles/App.css';
 
 class Transport extends React.Component {
     render() {
