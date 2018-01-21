@@ -42,7 +42,7 @@ class LandingPage extends React.Component {
                         src={require('../Resources/garnier.jpg')}
                     />
                     <PieCharts data1={data1}/>
-                    <ProgressBar/>
+                    <ProgressBar value={70}/>
                     <p>David is studying Computer Engineering at Polytechnique Montreal and subscribed to Hackavillage a
                         year ago. He uses a BIXI from the non-profit organization every day possible to go to school.
                         While

@@ -1,11 +1,15 @@
-import * as React from 'react';
+import * as React         from 'react';
 import { LinearProgress } from 'material-ui/Progress';
 
-class ProgressBar extends React.Component {
+interface ProgressBarProps {
+    value: number;
+}
+
+class ProgressBar extends React.Component<ProgressBarProps> {
     render() {
         return (
             <div className="Progress">
-                <LinearProgress mode="determinate" value={70} />
+                <LinearProgress mode="determinate" value={this.props.value}/>
             </div>
         );
     }
