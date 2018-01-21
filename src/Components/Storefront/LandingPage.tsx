@@ -1,7 +1,8 @@
 import * as React  from 'react';
 import PieCharts   from '../Common/PieCharts';
-import Avatar      from 'material-ui/Avatar';
 import ProgressBar from '../Common/ProgressBar';
+import Card, { CardContent, CardMedia } from 'material-ui/Card';
+import Typography from 'material-ui/Typography';
 
 const data1 = [{name: 'BIXI', value: 30}, {name: 'Energy', value: 25},
     {name: 'STM', value: 40}, {name: 'Other', value: 5}];
@@ -27,22 +28,31 @@ class LandingPage extends React.Component {
                     financial goal. The optic is to make the organizations save money while they give back to their
                     users in a form of social rewarding at an affordable price.</p>
                 <h2><strong>Here is an example</strong></h2>
-                <div>
-                    <Avatar
-                        alt="David, un utilisateur quelconque"
-                        src={require('../../Resources/garnier.jpg')}
-                    />
-                    <PieCharts data1={data1}/>
-                    <ProgressBar value={70}/>
-                    <p>David is studying Computer Engineering at Polytechnique Montreal and subscribed to Hackavillage a
-                        year ago. He uses a BIXI from the non-profit organization every day possible to go to school.
-                        While he gains points and rewards like rebate on its monthly pass for doing so, he helps the
-                        city
-                        solve its traffic and CO2 problems. On the other side, BIXI Montreal can see the abstract data
-                        converted into charts and graph to help see the progress towards its goal. This data can be
-                        projected to
-                        help adjust the pricing and rebate to its product.</p>
-                </div>
+                <Card>
+                    <CardMedia>
+                        <img src={require('../../Resources/garnier.jpg')}/>
+                    </CardMedia>
+                    <CardContent>
+                        <Typography type="headline" component="h2">
+                            David
+                        </Typography>
+                        <Typography component="p">
+                            David is studying Computer Engineering at Polytechnique Montreal and
+                            subscribed to Hackavillage a
+                            year ago. He uses a BIXI from the non-profit organization every day possible to go to
+                            school.
+                            While he gains points and rewards like rebate on its monthly pass for doing so, he helps the
+                            city
+                            solve its traffic and CO2 problems. On the other side, BIXI Montreal can see the abstract
+                            data
+                            converted into charts and graph to help see the progress towards its goal. This data can be
+                            projected to
+                            help adjust the pricing and rebate to its product.
+                        </Typography>
+                    </CardContent>
+                </Card>
+                <PieCharts data1={data1}/>
+                <ProgressBar value={70}/>
                 <h2><strong>Future goal</strong></h2>
                 <p> We already have a good working product. While we continually work on improving the performance and
                     the usability of our platform, we are currently working on expanding the extend of the social system
