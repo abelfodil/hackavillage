@@ -1,0 +1,13 @@
+
+:root {
+	--spacing: 100px;
+}
+
+div#member-space {
+	z-index: 1;
+	overflow: hidden;
+}
+
+div#member-space main {
+	margin-top: var(--spacing);
+}

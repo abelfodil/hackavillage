@@ -1,13 +1,13 @@
 import * as React from 'react';
 
-class Transport extends React.Component {
+class Home extends React.Component {
     render() {
         return (
             <div className="temp">
-                <p>Ceci est un patron</p>
+                <p>Ceci homeest un patron</p>
             </div>
         );
     }
 }
 
-export default Transport;
+export default Home;

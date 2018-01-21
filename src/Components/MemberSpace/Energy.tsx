@@ -1,14 +1,13 @@
 import * as React from 'react';
-import './Styles/App.css';
 
-class Settings extends React.Component {
+class Energy extends React.Component {
     render() {
         return (
             <div className="temp">
-                <p>caca</p>
+                <p>Ceci est ron</p>
             </div>
         );
     }
 }
 
-export default Settings;
+export default Energy;

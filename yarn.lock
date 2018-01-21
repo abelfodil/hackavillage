@@ -2,6 +2,16 @@
 # yarn lockfile v1
 
 
+"@types/d3-path@*":
+  version "1.0.6"
+  resolved "https://registry.yarnpkg.com/@types/d3-path/-/d3-path-1.0.6.tgz#c1a7d2dc07b295fdd1c84dabe4404df991b48693"
+
+"@types/d3-shape@*":
+  version "1.2.1"
+  resolved "https://registry.yarnpkg.com/@types/d3-shape/-/d3-shape-1.2.1.tgz#cac2d9f0122f173220c32c8c152dc42ee9349df2"
+  dependencies:
+    "@types/d3-path" "*"
+
 "@types/jest@^22.0.1":
   version "22.0.1"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-22.0.1.tgz#6370a6d60cce3845e4cd5d00bf65f654264685bc"
@@ -30,6 +40,13 @@
 "@types/react@*", "@types/react@^16.0.34":
   version "16.0.34"
   resolved "https://registry.yarnpkg.com/@types/react/-/react-16.0.34.tgz#7a8f795afd8a404a9c4af9539b24c75d3996914e"
+
+"@types/recharts@^1.0.10":
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/@types/recharts/-/recharts-1.0.10.tgz#4d238224f82df4b1c1558dc6f71627330d8b5703"
+  dependencies:
+    "@types/d3-shape" "*"
+    "@types/react" "*"
 
 abab@^1.0.3:
   version "1.0.4"
