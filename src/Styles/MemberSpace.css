@@ -15,3 +15,12 @@ div#member-space main {
 .collapsed {
 	padding-left: 15px;
 }
+
+.appbar {
+	transition: width 225ms;
+}
+
+.appbar-title {
+	text-align: center;
+	width: 100%;
+}

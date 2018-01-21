@@ -55,8 +55,7 @@ class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
         let appBarWidth;
         if (this.state.open) {
             appBarWidth = {
-                width: 'calc(100% - ' + drawerWidth + 'px)',
-                transition: 'width 225ms'
+                width: 'calc(100% - ' + drawerWidth + 'px)'
             };
         } else {
             appBarWidth = {
@@ -66,7 +65,7 @@ class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
 
         return (
             <div>
-                <AppBar style={appBarWidth}>
+                <AppBar className="appbar" style={appBarWidth}>
                     <Toolbar disableGutters={!open}>
                         <IconButton
                             color="contrast"
@@ -78,7 +77,7 @@ class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
                         >
                             <Menu/>
                         </IconButton>
-                        {this.props.title}
+                        <span className="appbar-title">{this.props.title}</span>
                     </Toolbar>
                 </AppBar>
                 <Drawer
