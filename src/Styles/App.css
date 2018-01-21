@@ -11,7 +11,7 @@
 }
 
 .David{
-	left: calc(50% - 125px);
+	left: calc(50% - 125px) !important;
 }
 
 .Progress > div{
@@ -38,3 +38,6 @@ main {
 	max-width: 800px;
 }
 
+.card1 p, .card1 h2, .card1 span {
+	color: #555555 !important;
+}
