@@ -9,7 +9,6 @@ import '../../Styles/MemberSpace.css';
 import Account           from './Account';
 
 interface MemberState {
-    title: string;
     choice: Pages;
 }
 
@@ -21,7 +20,6 @@ class MemberSpace extends React.Component<MemberProps, MemberState> {
     constructor(props: MemberProps) {
         super(props);
         this.state = {
-            title: 'Home',
             choice: Pages.Home
         };
     }
@@ -34,27 +32,33 @@ class MemberSpace extends React.Component<MemberProps, MemberState> {
 
     render() {
         let renderedElement;
+        let elementTitle;
         switch (this.state.choice) {
             case Pages.Energy:
                 renderedElement = <Energy/>;
+                elementTitle = 'Energy';
                 break;
             case Pages.Privacy:
                 renderedElement = <Privacy/>;
+                elementTitle = 'Privacy';
                 break;
             case Pages.Account:
                 renderedElement = <Account/>;
+                elementTitle = 'Account';
                 break;
             case Pages.Transport:
                 renderedElement = <Transport/>;
+                elementTitle = 'Transport';
                 break;
             default:
                 renderedElement = <Home/>;
+                elementTitle = 'Home';
         }
 
         return (
             <div id="member-space">
                 <Drawer
-                    title={this.state.title}
+                    title={elementTitle}
                     handlePageChange={this.handlePageChange}
                 />
                 <main>{renderedElement}</main>

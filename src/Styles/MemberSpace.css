@@ -11,3 +11,16 @@ div#member-space {
 div#member-space main {
 	margin-top: var(--spacing);
 }
+
+.collapsed {
+	padding-left: 15px;
+}
+
+.appbar {
+	transition: width 225ms;
+}
+
+.appbar-title {
+	text-align: center;
+	width: 100%;
+}
