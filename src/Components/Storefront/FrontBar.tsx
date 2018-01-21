@@ -18,7 +18,7 @@ class FrontBar extends React.Component<BarProps> {
                         color="contrast"
                         onClick={() => this.props.handleChange(DisplayedPage.Home)}
                     >
-                        Common Goal
+                        SharpCity
                     </Button>
                     <div style={{marginLeft: '76%', display: 'flex', flexDirection: 'row'}}>
                     <Button

@@ -16,17 +16,16 @@ class LandingPage extends React.Component {
                     </CardMedia>
                     <CardContent>
                         <Typography component="p">
-                            SharpCity is an interactive platform aiming to improve the social environment of cities
-                            around the
-                            world through its contributors by using dividends. It offers a large range of solutions for
-                            smart
-                            cities that want to improve the population’s implication. On the other hand, the citizens
-                            benefit
-                            social rewards directly related to their actions and choices. The more you contribute the
-                            easier it
-                            gets to help the common well. Overall this is a win-win situation between the two
-                            beneficiaries: a
-                            town and its townsfolk.
+                            SharpCity is all about ushering social and environment change through a reward-based
+                            interactive platform aiming to improve life quality of every citizen of every cities.
+                            We offer a large range of solutions at the disposal of your soon-to-be city to promote a
+                            How does the model work?
+                            Your citizens get access to a wide array of social missions to pursue and as they do,
+                            rewards directly related to their actions and choices will be available to them.
+                            It's simple, the more reasons you give to your citizens to contribute the common good,
+                            the better it gets for everyone's future.
+                            Overall this is a win-win situation for all parties involved: a city become more attractive
+                            and sustainable and its townfolks live in a provably better environment.
                         </Typography>
                     </CardContent>
                 </Card>
@@ -40,13 +39,10 @@ class LandingPage extends React.Component {
                     </CardMedia>
                     <CardContent>
                         <Typography component="p">
-                            If you register, you gain access to your own contribution tools. As a citizen you can choose
-                            your
-                            city and the categories you want to participate, the progress you are at, the current
-                            progress and
-                            the applicable rewards. Don’t worry, by default, other users can’t see any data that results
-                            from
-                            your implication!
+                            If you register, you gain access to your own contribution tools. As a citizen you chose the
+                            what kind of social pursuits you want to participate in, the progress you make toward them
+                            and your future applicable rewards. Don’t worry, by default, other users can’t see any
+                            private data that results from your implication!
                         </Typography>
                     </CardContent>
                 </Card>
@@ -60,18 +56,18 @@ class LandingPage extends React.Component {
                     </CardMedia>
                     <CardContent>
                         <Typography component="p">
-                            With any kind of contribution, SharpCity will help you gain visibility and to advance in
-                            your
-                            financial goal. The optic is to make the organizations save money while they give back to
-                            their
-                            users in a form of social rewarding at an affordable price.
+                            From a small town up to a big metropolitain city, there is no reason to pass up on
+                            optimizing your living space for the future. We will help you build a robust action plan and
+                            provide you with tools to apply them successfully. You will gain visibility while
+                            advancing your long-term financial interests. Give back to the community and give back to
+                            your futur self at the same time.
                         </Typography>
                     </CardContent>
                 </Card>
                 <br/>
                 <Card className="card1">
                     <CardHeader
-                        title="Here is an example"
+                        title="A typical usecase"
                     />
                     <CardMedia>
                         <Avatar
@@ -84,17 +80,15 @@ class LandingPage extends React.Component {
                             David Garnier
                         </Typography>
                         <Typography component="p">
-                            David is studying Computer Engineering at Polytechnique Montreal and
-                            subscribed to SharpCity a
-                            year ago. He uses a BIXI from the non-profit organization every day possible to go to
-                            school.
-                            While he gains points and rewards like rebate on its monthly pass for doing so, he helps the
-                            city
-                            solve its traffic and CO2 problems. On the other side, BIXI Montreal can see the abstract
-                            data
-                            converted into charts and graph to help see the progress towards its goal. This data can be
-                            projected to
-                            help adjust the pricing and rebate to its product.
+                            David is studying Computer Engineering at Polytechnique Montreal and has subscribed to
+                            SharpCity a year ago. He uses a bicycle-sharing service from a municipal non-profit
+                            organization every day he possibly can to go to school. He can track his CO2 reducing
+                            effort and rewards associated with it like rebates on its monthly pass, he helps the city
+                            solve some of its overarching traffic and CO2 problems. On the organization's side,
+                            BIXI Montreal gets to use abstract data unavailable to them until now and in a digestible
+                            way. The data is converted into charts and graph to track the real-world impact of its
+                            initiave. The new found information can be integrated in the organizations pricing model to
+                            help adjust the pricing and discounts any product or service it may have.
                         </Typography>
                     </CardContent>
                 </Card>
@@ -108,13 +102,10 @@ class LandingPage extends React.Component {
                     </CardMedia>
                     <CardContent>
                         <Typography component="p">
-                            We already have a good working product. While we continually work on improving the
-                            performance and
-                            the usability of our platform, we are currently working on expanding the extend of the
-                            social system
-                            to implement an API that will link directly to the organization that wants to implement
-                            SharpCity
-                            and use its functionalities.
+                            Already having a good working product, we still continue on improving the
+                            performance and usability of our platform, we are currently working on expanding the social
+                            system to expose a simple API that will directly link any organization that wants to
+                            use SharpCity and its functionalities.
                         </Typography>
                     </CardContent>
                 </Card>

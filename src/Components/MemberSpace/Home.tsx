@@ -13,12 +13,12 @@ import RadarCharts from '../Common/RadarCharts';
 import LineCharts from '../Common/LineCharts';
 
 const data = [
-    {name: 'Août', uv: 3000},
-    {name: 'Sept', uv: 2000},
-    {name: 'Oct', uv: 2780},
-    {name: 'Nov', uv: 1890},
-    {name: 'Dec', uv: 2390},
-    {name: 'Jan', uv: 3490}
+    {name: 'Août', uv: 300},
+    {name: 'Sept', uv: 200},
+    {name: 'Oct', uv: 278},
+    {name: 'Nov', uv: 189},
+    {name: 'Dec', uv: 239},
+    {name: 'Jan', uv: 349}
 ];
 
 const data1 = [
@@ -47,19 +47,16 @@ class Home extends React.Component {
                 <h1 style={{fontSize: '300%'}}>David Garnier</h1>
                 <div style={{textAlign: 'left'}}>
                     <p style={{fontSize: '75%', fontColor: 'grey'}}>"Keep close to Nature's heart... and break clear
-                        away, once in awhile,
-                        and
-                        climb a mountain or
-                        spend a week in the woods. Wash your spirit clean."</p>
+                        away, once in awhile, and climb a mountain or spend a week in the woods. Wash your spirit
+                        clean."</p>
                 </div>
                 <div style={{paddingTop: '55px'}}>
                     <h1><strong>My Bio</strong></h1>
                     <div style={{textAlign: 'left'}}>
                         <p>Hello, my name is David Garnier. I am studying in computer science which is a domain i love
-                            to study. I want to innovate the world with some new way to live your everyday. Technologies
-                            are the futur of the human kind. Everything is made out and used for a good purpose in life.
-                            I want to use that oppotunity to create a new lifestyle which will change everything in this
-                            world. I will be the next biggest innovator the world will know.</p>
+                            to study. I want to make my mark on the world with some new way to live your everyday.
+                            Technologies are the future of human kind. I want to take every opportunities to create a
+                            new and better world.</p>
                     </div>
                 </div>
                 <div style={{display: 'flex', flexDirection: 'row'}}>
@@ -67,7 +64,7 @@ class Home extends React.Component {
                     <div>
                         <br/>
                         <br/>
-                        Title
+                        Monthly dolar-converted social impact
                         <span style={{fontSize: '15px'}}><BandCharts data={data}/></span>
                     </div>
                     <div>
