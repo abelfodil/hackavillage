@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { LineChart, Line, CartesianGrid, XAxis, YAxis, Tooltip, Legend } from 'recharts';
 
-interface ChartsProps {
+interface LineChartsProps {
     data: Array<object>;
 }
 
-class Charts extends React.Component<ChartsProps> {
+class LineCharts extends React.Component<LineChartsProps> {
     render() {
         return (
 
@@ -27,4 +27,4 @@ class Charts extends React.Component<ChartsProps> {
     }
 }
 
-export default Charts;
+export default LineCharts;
