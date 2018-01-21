@@ -8,9 +8,8 @@ import Divider                                        from 'material-ui/Divider'
 import AppBar                                         from 'material-ui/AppBar';
 
 import {
-    ExpandLess, ExpandMore, Home, ChevronLeft,
-    Menu, Settings, Lock, AccountCircle, ExitToApp,
-    DirectionsTransit, Power
+    ExpandLess, ExpandMore, Home, Menu, Settings,
+    Lock, AccountCircle, ExitToApp, DirectionsTransit, Power
 } from 'material-ui-icons';
 
 interface DrawerState {
@@ -32,6 +31,8 @@ export enum Pages {
     Privacy
 }
 
+const drawerWidth = 240;
+
 class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
     constructor(props: DrawerProps) {
         super(props);
@@ -41,23 +42,34 @@ class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
         };
     }
 
-    handleDrawerOpen = () => {
-        this.setState({open: true});
-    }
-
     handleDrawerClose = () => {
         this.setState({open: false});
     }
 
     render() {
+        let appBarWidth;
+        if (this.state.open) {
+            appBarWidth = {
+                width: 'calc(100% - ' + drawerWidth + 'px)',
+                transition: 'width 225ms'
+            };
+        } else {
+            appBarWidth = {
+                width: '100%'
+            };
+        }
+
         return (
             <div>
-                <AppBar>
+                <AppBar style={appBarWidth}>
                     <Toolbar disableGutters={!open}>
                         <IconButton
                             color="contrast"
-                            aria-label="open drawer"
-                            onClick={this.handleDrawerOpen}
+                            onClick={
+                                () => {
+                                    this.setState({open: !this.state.open});
+                                }
+                            }
                         >
                             <Menu/>
                         </IconButton>
@@ -66,46 +78,39 @@ class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
                 </AppBar>
                 <Drawer
                     type="persistent"
+                    style={{width: drawerWidth}}
                     anchor="left"
                     open={this.state.open}
                 >
-                    <div>
-                        <div>
-                            <IconButton onClick={this.handleDrawerClose}>
-                                <ChevronLeft/>
-                            </IconButton>
-                        </div>
+                    <div style={{width: drawerWidth}}>
+                        <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Home)}>
+                            <ListItemIcon>
+                                <Home/>
+                            </ListItemIcon>
+                            <ListItemText
+                                inset={true}
+                                primary="Home"
+                            />
+                        </ListItem>
                         <Divider/>
-                        <List>
-                            <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Home)}>
-                                <ListItemIcon>
-                                    <Home/>
-                                </ListItemIcon>
-                                <ListItemText
-                                    inset={true}
-                                    primary="Home"
-                                />
-                            </ListItem>
-                            <Divider/>
-                            <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Energy)}>
-                                <ListItemIcon>
-                                    <Power/>
-                                </ListItemIcon>
-                                <ListItemText
-                                    inset={true}
-                                    primary="Energy"
-                                />
-                            </ListItem>
-                            <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Transport)}>
-                                <ListItemIcon>
-                                    <DirectionsTransit/>
-                                </ListItemIcon>
-                                <ListItemText
-                                    inset={true}
-                                    primary="Transport"
-                                />
-                            </ListItem>
-                        </List>
+                        <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Energy)}>
+                            <ListItemIcon>
+                                <Power/>
+                            </ListItemIcon>
+                            <ListItemText
+                                inset={true}
+                                primary="Energy"
+                            />
+                        </ListItem>
+                        <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Transport)}>
+                            <ListItemIcon>
+                                <DirectionsTransit/>
+                            </ListItemIcon>
+                            <ListItemText
+                                inset={true}
+                                primary="Transport"
+                            />
+                        </ListItem>
                         <Divider/>
                         <ListItem
                             button={true}
@@ -122,7 +127,7 @@ class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
                             {this.state.settingsOpen ? <ExpandLess/> : <ExpandMore/>}
                         </ListItem>
                         <Collapse component="li" in={this.state.settingsOpen} timeout="auto" unmountOnExit={true}>
-                            <List disablePadding={true}>
+                            <List>
                                 <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Privacy)}>
                                     <ListItemIcon>
                                         <Lock/>
