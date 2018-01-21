@@ -18,7 +18,8 @@ class LandingPage extends React.Component {
                         <Typography component="p">
                             SharpCity is all about ushering social and environment change through a reward-based
                             interactive platform aiming to improve life quality of every citizen of every cities.
-                            We offer a large range of solutions at the disposal of your soon-to-be city to promote a
+                            We offer a large range of solutions at the disposal of your soon-to-be smart city to promote
+                            a greener, more relaxed and sustainable future.
                             How does the model work?
                             Your citizens get access to a wide array of social missions to pursue and as they do,
                             rewards directly related to their actions and choices will be available to them.
