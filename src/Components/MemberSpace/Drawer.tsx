@@ -10,7 +10,7 @@ import AppBar                                         from 'material-ui/AppBar';
 import {
     ExpandLess, ExpandMore, Home, ChevronLeft,
     Menu, Settings, Lock, AccountCircle, ExitToApp,
-    DirectionsTransit
+    DirectionsTransit, Power
 } from 'material-ui-icons';
 
 interface DrawerState {
@@ -85,7 +85,16 @@ class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
                                     primary="Home"
                                 />
                             </ListItem>
-
+                            <Divider/>
+                            <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Energy)}>
+                                <ListItemIcon>
+                                    <Power />
+                                </ListItemIcon>
+                                <ListItemText
+                                    inset={true}
+                                    primary="Energy"
+                                />
+                            </ListItem>
                             <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Transport)}>
                                 <ListItemIcon>
                                     <DirectionsTransit />
@@ -96,7 +105,7 @@ class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
                                 />
                             </ListItem>
                         </List>
-
+                        <Divider/>
                         <ListItem
                             button={true}
                             onClick={() => {
@@ -111,7 +120,6 @@ class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
                             <ListItemText inset={true} primary="Settings"/>
                             {this.state.settingsOpen ? <ExpandLess/> : <ExpandMore/>}
                         </ListItem>
-
                         <Collapse component="li" in={this.state.settingsOpen} timeout="auto" unmountOnExit={true}>
                             <List disablePadding={true} onClick={() => this.props.handlePageChange(Pages.Settings)}>
                                 <ListItem button={true}>

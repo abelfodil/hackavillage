@@ -2,6 +2,9 @@ import * as React        from 'react';
 import Drawer, { Pages } from './Drawer';
 import Transport         from './Transport';
 import Settings          from './Settings';
+import Home              from './Home';
+import Energy            from './Energy';
+
 import '../../Styles/MemberSpace.css';
 
 interface MemberState {
@@ -31,6 +34,9 @@ class MemberSpace extends React.Component<MemberProps, MemberState> {
     render() {
         let renderedElement;
         switch (this.state.choice) {
+            case Pages.Energy:
+                renderedElement = <Energy/>;
+                break;
             case Pages.Settings:
                 renderedElement = <Settings/>;
                 break;
@@ -38,7 +44,7 @@ class MemberSpace extends React.Component<MemberProps, MemberState> {
                 renderedElement = <Transport/>;
                 break;
             default:
-                renderedElement = <Settings/>;
+                renderedElement = <Home/>;
         }
 
         return (
