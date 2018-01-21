@@ -66,8 +66,7 @@ class Login extends React.Component<LoginProps, LoginState> {
 
     render() {
         return (
-
-            <div className="temp">
+            <main>
                 <span>Login</span>
                 <br/>
                 <FormControl error={this.state.emailError}>
@@ -109,7 +108,7 @@ class Login extends React.Component<LoginProps, LoginState> {
                 >
                     Submit
                 </Button>
-            </div>
+            </main>
         );
     }
 }
