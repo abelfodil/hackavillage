@@ -1,12 +1,7 @@
 import * as React                                   from 'react';
-import PieCharts                                    from '../Common/PieCharts';
-import ProgressBar                                  from '../Common/ProgressBar';
 import Card, { CardContent, CardMedia, CardHeader } from 'material-ui/Card';
 import Typography                                   from 'material-ui/Typography';
 import Avatar                                       from 'material-ui/Avatar';
-
-const data1 = [{name: 'BIXI', value: 30}, {name: 'Energy', value: 25},
-    {name: 'STM', value: 40}, {name: 'Other', value: 5}];
 
 class LandingPage extends React.Component {
     render() {
@@ -14,14 +9,14 @@ class LandingPage extends React.Component {
             <main id="landpage">
                 <Card className="card1">
                     <CardHeader
-                        title="About Hackavillage"
+                        title="About SharpCity"
                     />
                     <CardMedia>
                         <img src={require('../../Resources/sharplogo.png')} className="David"/>
                     </CardMedia>
                     <CardContent>
                         <Typography component="p">
-                            Hackavillage is an interactive platform aiming to improve the social environment of cities
+                            SharpCity is an interactive platform aiming to improve the social environment of cities
                             around the
                             world through its contributors by using dividends. It offers a large range of solutions for
                             smart
@@ -63,7 +58,7 @@ class LandingPage extends React.Component {
                     </CardMedia>
                     <CardContent>
                         <Typography component="p">
-                            With any kind of contribution, Hackavillage will help you gain visibility and to advance in
+                            With any kind of contribution, SharpCity will help you gain visibility and to advance in
                             your
                             financial goal. The optic is to make the organizations save money while they give back to
                             their
@@ -87,7 +82,7 @@ class LandingPage extends React.Component {
                         </Typography>
                         <Typography component="p">
                             David is studying Computer Engineering at Polytechnique Montreal and
-                            subscribed to Hackavillage a
+                            subscribed to SharpCity a
                             year ago. He uses a BIXI from the non-profit organization every day possible to go to
                             school.
                             While he gains points and rewards like rebate on its monthly pass for doing so, he helps the
@@ -100,8 +95,6 @@ class LandingPage extends React.Component {
                         </Typography>
                     </CardContent>
                 </Card>
-                <PieCharts data1={data1}/>
-                <ProgressBar value={70}/>
                 <Card className="card1">
                     <CardHeader
                         title="Future goal"
@@ -116,7 +109,7 @@ class LandingPage extends React.Component {
                             the usability of our platform, we are currently working on expanding the extend of the
                             social system
                             to implement an API that will link directly to the organization that wants to implement
-                            Hackavillage
+                            SharpCity
                             and use its functionalities.
                         </Typography>
                     </CardContent>
