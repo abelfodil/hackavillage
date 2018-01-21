@@ -1,8 +1,8 @@
-import * as React from 'react';
-import Input, { InputLabel } from 'material-ui/Input';
+import * as React                      from 'react';
+import Input, { InputLabel }           from 'material-ui/Input';
 import { FormControl, FormHelperText } from 'material-ui/Form';
-import { ChangeEvent } from 'react';
-import Button from 'material-ui/Button';
+import { ChangeEvent }                 from 'react';
+import Button                          from 'material-ui/Button';
 
 interface LoginState {
     email: string;

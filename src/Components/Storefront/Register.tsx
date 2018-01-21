@@ -1,8 +1,8 @@
-import * as React from 'react';
-import Input, { InputLabel } from 'material-ui/Input';
+import * as React                      from 'react';
+import Input, { InputLabel }           from 'material-ui/Input';
 import { FormControl, FormHelperText } from 'material-ui/Form';
-import { ChangeEvent } from 'react';
-import Button from 'material-ui/Button';
+import { ChangeEvent }                 from 'react';
+import Button                          from 'material-ui/Button';
 
 interface RegisterState {
     email: string;
@@ -124,7 +124,7 @@ class Register extends React.Component<RegisterProps, RegisterState> {
                 </FormControl>
                 <br/>
                 <FormControl className="LeftField" error={this.state.emailError}>
-                    <InputLabel htmlFor="name-simple" >Email</InputLabel>
+                    <InputLabel htmlFor="name-simple">Email</InputLabel>
                     <Input
                         id="name-simple"
                         value={this.state.email}
