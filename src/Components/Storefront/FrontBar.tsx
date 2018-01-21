@@ -20,6 +20,7 @@ class FrontBar extends React.Component<BarProps> {
                     >
                         Common Goal
                     </Button>
+                    <div style={{marginLeft: '76%', display: 'flex', flexDirection: 'row'}}>
                     <Button
                         id="login"
                         color="contrast"
@@ -34,6 +35,7 @@ class FrontBar extends React.Component<BarProps> {
                     >
                         Register
                     </Button>
+                    </div>
                 </Toolbar>
             </AppBar>
         );

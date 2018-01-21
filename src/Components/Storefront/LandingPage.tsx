@@ -12,10 +12,11 @@ class LandingPage extends React.Component {
     render() {
         return (
             <main id="landpage">
-                <h2><strong> About Hackavillage </strong></h2>
-                <p>Hackavillage is an interactive platform aiming to improve the social environment of cities around the
-                    world through its contributors by using dividends. It offers a large range of solutions for smart
-                    cities that want to improve the population’s implication. On the other hand, the citizens benefit
+                <h2><strong> About our Common Goal </strong></h2>
+                <p>Common Goal is all about ushering social and environment change through a reward-based interactive
+                    platform aiming to improve life quality of every citizen of every cities. It offers a large range
+                    of solutions at the disposal of soon-t cities to promote a greener, more relaxed and sustainable
+                    future. On the other hand, the citizens benefit
                     social rewards directly related to their actions and choices. The more you contribute the easier it
                     gets to help the common well. Overall this is a win-win situation between the two beneficiaries: a
                     town and its townsfolk.</p>

@@ -10,10 +10,10 @@ class BandCharts extends React.Component<BandChartsProps> {
     render() {
         return (
             <BarChart
-                width={750}
+                width={500}
                 height={300}
                 data={this.props.data}
-                margin={{top: 5, right: 30, left: 20, bottom: 5}}
+                margin={{top: 30, right: 30, left: 20, bottom: 5}}
             >
                 <XAxis dataKey="name"/>
                 <YAxis/>
