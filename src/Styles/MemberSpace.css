@@ -11,3 +11,7 @@ div#member-space {
 div#member-space main {
 	margin-top: var(--spacing);
 }
+
+.collapsed {
+	padding-left: 15px;
+}
