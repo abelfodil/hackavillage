@@ -96,8 +96,7 @@ class Register extends React.Component<RegisterProps, RegisterState> {
 
     render() {
         return (
-
-            <div className="temp">
+            <main>
                 <span>Register</span>
                 <br/>
                 <FormControl className="LeftField" error={this.state.firstNameError}>
@@ -164,7 +163,7 @@ class Register extends React.Component<RegisterProps, RegisterState> {
                 >
                     Submit
                 </Button>
-            </div>
+            </main>
         );
     }
 }
