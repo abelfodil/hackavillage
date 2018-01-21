@@ -1,8 +1,9 @@
-import * as React  from 'react';
-import PieCharts   from '../Common/PieCharts';
-import ProgressBar from '../Common/ProgressBar';
+import * as React                       from 'react';
+import PieCharts                        from '../Common/PieCharts';
+import ProgressBar                      from '../Common/ProgressBar';
 import Card, { CardContent, CardMedia } from 'material-ui/Card';
-import Typography from 'material-ui/Typography';
+import Typography                       from 'material-ui/Typography';
+import Avatar                           from 'material-ui/Avatar';
 
 const data1 = [{name: 'BIXI', value: 30}, {name: 'Energy', value: 25},
     {name: 'STM', value: 40}, {name: 'Other', value: 5}];
@@ -30,7 +31,11 @@ class LandingPage extends React.Component {
                 <h2><strong>Here is an example</strong></h2>
                 <Card>
                     <CardMedia>
-                        <img src={require('../../Resources/garnier.jpg')}/>
+                        <Avatar
+                            alt="Adelle Charles"
+                            src={require('../../Resources/garnier.jpg')}
+                            className="David"
+                        />
                     </CardMedia>
                     <CardContent>
                         <Typography type="headline" component="h2">
