@@ -20,21 +20,22 @@ class FrontBar extends React.Component<BarProps> {
                     >
                         SharpCity
                     </Button>
-                    <div style={{marginLeft: '76%', display: 'flex', flexDirection: 'row'}}>
-                    <Button
-                        id="login"
-                        color="contrast"
-                        onClick={() => this.props.handleChange(DisplayedPage.Login)}
-                    >
-                        Login
-                    </Button>
-                    <Button
-                        id="register"
-                        color="contrast"
-                        onClick={() => this.props.handleChange(DisplayedPage.Register)}
-                    >
-                        Register
-                    </Button>
+                    <div className="landButtons">
+                        <Button
+                            id="login"
+                            color="contrast"
+                            onClick={() => this.props.handleChange(DisplayedPage.Login)}
+                        >
+                            Login
+                        </Button>
+
+                        <Button
+                            id="register"
+                            color="contrast"
+                            onClick={() => this.props.handleChange(DisplayedPage.Register)}
+                        >
+                            Register
+                        </Button>
                     </div>
                 </Toolbar>
             </AppBar>

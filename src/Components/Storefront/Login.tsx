@@ -66,9 +66,9 @@ class Login extends React.Component<LoginProps, LoginState> {
 
     render() {
         return (
-            <main>
+            <main className="form">
                 <h1>Login</h1>
-                <FormControl error={this.state.emailError}>
+                <FormControl error={this.state.emailError} fullWidth={true}>
                     <InputLabel htmlFor="name-simple">Email</InputLabel>
                     <Input
                         id="name-simple"
@@ -80,7 +80,7 @@ class Login extends React.Component<LoginProps, LoginState> {
                     <FormHelperText id="name-helper-text"> {this.state.emailErrorText}</FormHelperText>
                 </FormControl>
                 <br/>
-                <FormControl error={this.state.passwordError}>
+                <FormControl error={this.state.passwordError} fullWidth={true}>
                     <InputLabel htmlFor="name-helper">Password</InputLabel>
                     <Input
                         id="name-helper"

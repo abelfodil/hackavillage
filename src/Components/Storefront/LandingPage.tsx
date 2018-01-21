@@ -7,7 +7,7 @@ class LandingPage extends React.Component {
     render() {
         return (
             <main id="landpage">
-                <Card className="card1">
+                <Card className="card">
                     <CardHeader
                         title="About SharpCity"
                     />
@@ -31,7 +31,7 @@ class LandingPage extends React.Component {
                     </CardContent>
                 </Card>
                 <br/>
-                <Card className="card1">
+                <Card className="card">
                     <CardHeader
                         title="You’re a Citizen"
                     />
@@ -48,7 +48,7 @@ class LandingPage extends React.Component {
                     </CardContent>
                 </Card>
                 <br/>
-                <Card className="card1">
+                <Card className="card">
                     <CardHeader
                         title="You’re a City/Organization"
                     />
@@ -66,7 +66,7 @@ class LandingPage extends React.Component {
                     </CardContent>
                 </Card>
                 <br/>
-                <Card className="card1">
+                <Card className="card">
                     <CardHeader
                         title="A typical usecase"
                     />
@@ -94,7 +94,7 @@ class LandingPage extends React.Component {
                     </CardContent>
                 </Card>
                 <br/>
-                <Card className="card1">
+                <Card className="card">
                     <CardHeader
                         title="Future goal"
                     />
@@ -111,7 +111,7 @@ class LandingPage extends React.Component {
                     </CardContent>
                 </Card>
                 <br/>
-                <Card className="card1">
+                <Card className="card">
                     <CardHeader
                         title="Who are we?"
                     />

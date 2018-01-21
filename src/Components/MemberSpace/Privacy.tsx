@@ -4,7 +4,7 @@ class Privacy extends React.Component {
     render() {
         return (
             <div className="temp">
-                <p>caca</p>
+                <p>Not done</p>
             </div>
         );
     }

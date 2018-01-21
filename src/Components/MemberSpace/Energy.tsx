@@ -4,7 +4,7 @@ class Energy extends React.Component {
     render() {
         return (
             <div className="temp">
-                <p>Ceci est ron</p>
+                <p>Not done</p>
             </div>
         );
     }

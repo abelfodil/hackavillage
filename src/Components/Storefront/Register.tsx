@@ -96,10 +96,9 @@ class Register extends React.Component<RegisterProps, RegisterState> {
 
     render() {
         return (
-            <main>
-                <span>Register</span>
-                <br/>
-                <FormControl className="LeftField" error={this.state.firstNameError}>
+            <main className="form">
+                <h1>Register</h1>
+                <FormControl className="LeftField" error={this.state.firstNameError} fullWidth={true}>
                     <InputLabel htmlFor="name-simple">First Name</InputLabel>
                     <Input
                         id="name-simple"
@@ -110,7 +109,8 @@ class Register extends React.Component<RegisterProps, RegisterState> {
                     />
                     <FormHelperText id="name-helper-text"> {this.state.firstNameErrorText}</FormHelperText>
                 </FormControl>
-                <FormControl className="RightField" error={this.state.lastNameError}>
+                <br/>
+                <FormControl className="RightField" error={this.state.lastNameError} fullWidth={true}>
                     <InputLabel htmlFor="name-simple">Last Name</InputLabel>
                     <Input
                         id="name-simple"
@@ -122,7 +122,7 @@ class Register extends React.Component<RegisterProps, RegisterState> {
                     <FormHelperText id="name-helper-text"> {this.state.lasttNameErrorText}</FormHelperText>
                 </FormControl>
                 <br/>
-                <FormControl className="LeftField" error={this.state.emailError}>
+                <FormControl className="LeftField" error={this.state.emailError} fullWidth={true}>
                     <InputLabel htmlFor="name-simple">Email</InputLabel>
                     <Input
                         id="name-simple"
@@ -133,7 +133,8 @@ class Register extends React.Component<RegisterProps, RegisterState> {
                     />
                     <FormHelperText id="name-helper-text"> {this.state.emailErrorText}</FormHelperText>
                 </FormControl>
-                <FormControl className="RightField" error={this.state.passwordError}>
+                <br/>
+                <FormControl className="RightField" error={this.state.passwordError} fullWidth={true}>
                     <InputLabel htmlFor="name-helper">Password</InputLabel>
                     <Input
                         id="name-helper"
