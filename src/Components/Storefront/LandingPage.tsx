@@ -11,7 +11,7 @@ class LandingPage extends React.Component {
                     <CardHeader
                         title="About SharpCity"
                     />
-                    <CardMedia>
+                    <CardMedia style={{left: '50%'}}>
                         <img src={require('../../Resources/sharplogo.png')} className="David"/>
                     </CardMedia>
                     <CardContent>
@@ -30,6 +30,7 @@ class LandingPage extends React.Component {
                         </Typography>
                     </CardContent>
                 </Card>
+                <br/>
                 <Card className="card1">
                     <CardHeader
                         title="You’re a Citizen"
@@ -49,6 +50,7 @@ class LandingPage extends React.Component {
                         </Typography>
                     </CardContent>
                 </Card>
+                <br/>
                 <Card className="card1">
                     <CardHeader
                         title="You’re a City/Organization"
@@ -66,6 +68,7 @@ class LandingPage extends React.Component {
                         </Typography>
                     </CardContent>
                 </Card>
+                <br/>
                 <Card className="card1">
                     <CardHeader
                         title="Here is an example"
@@ -78,7 +81,7 @@ class LandingPage extends React.Component {
                     </CardMedia>
                     <CardContent>
                         <Typography type="headline" component="h2">
-                            David
+                            David Garnier
                         </Typography>
                         <Typography component="p">
                             David is studying Computer Engineering at Polytechnique Montreal and
@@ -95,6 +98,7 @@ class LandingPage extends React.Component {
                         </Typography>
                     </CardContent>
                 </Card>
+                <br/>
                 <Card className="card1">
                     <CardHeader
                         title="Future goal"
@@ -114,6 +118,7 @@ class LandingPage extends React.Component {
                         </Typography>
                     </CardContent>
                 </Card>
+                <br/>
                 <Card className="card1">
                     <CardHeader
                         title="Who are we?"
@@ -131,6 +136,7 @@ class LandingPage extends React.Component {
                         </Typography>
                     </CardContent>
                 </Card>
+                <br/>
             </main>
         );
     }

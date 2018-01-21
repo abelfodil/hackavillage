@@ -11,7 +11,7 @@
 }
 
 .David{
-	left: calc(50% - 125px) !important;
+	margin-left: calc(50% - 125px) !important;
 }
 
 .Progress > div{
