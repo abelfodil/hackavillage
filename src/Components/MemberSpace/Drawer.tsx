@@ -31,7 +31,7 @@ export enum Pages {
     Privacy
 }
 
-const drawerWidth = 240;
+const drawerWidth = 200;
 
 class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
     constructor(props: DrawerProps) {
@@ -40,6 +40,11 @@ class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
             open: false,
             settingsOpen: false
         };
+    }
+
+    handlePageChange = (page: Pages) => {
+        this.props.handlePageChange(page);
+        this.handleDrawerClose();
     }
 
     handleDrawerClose = () => {
@@ -82,8 +87,13 @@ class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
                     anchor="left"
                     open={this.state.open}
                 >
-                    <div style={{width: drawerWidth}}>
-                        <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Home)}>
+                    <div
+                        style={{
+                            width: drawerWidth,
+                            textAlign: 'left'
+                        }}
+                    >
+                        <ListItem button={true} onClick={() => this.handlePageChange(Pages.Home)}>
                             <ListItemIcon>
                                 <Home/>
                             </ListItemIcon>
@@ -93,7 +103,7 @@ class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
                             />
                         </ListItem>
                         <Divider/>
-                        <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Energy)}>
+                        <ListItem button={true} onClick={() => this.handlePageChange(Pages.Energy)}>
                             <ListItemIcon>
                                 <Power/>
                             </ListItemIcon>
@@ -102,7 +112,7 @@ class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
                                 primary="Energy"
                             />
                         </ListItem>
-                        <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Transport)}>
+                        <ListItem button={true} onClick={() => this.handlePageChange(Pages.Transport)}>
                             <ListItemIcon>
                                 <DirectionsTransit/>
                             </ListItemIcon>
@@ -126,15 +136,21 @@ class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
                             <ListItemText inset={true} primary="Settings"/>
                             {this.state.settingsOpen ? <ExpandLess/> : <ExpandMore/>}
                         </ListItem>
-                        <Collapse component="li" in={this.state.settingsOpen} timeout="auto" unmountOnExit={true}>
+                        <Collapse
+                            className="collapsed"
+                            component="li"
+                            in={this.state.settingsOpen}
+                            timeout="auto"
+                            unmountOnExit={true}
+                        >
                             <List>
-                                <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Privacy)}>
+                                <ListItem button={true} onClick={() => this.handlePageChange(Pages.Privacy)}>
                                     <ListItemIcon>
                                         <Lock/>
                                     </ListItemIcon>
                                     <ListItemText inset={true} primary="Privacy"/>
                                 </ListItem>
-                                <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Account)}>
+                                <ListItem button={true} onClick={() => this.handlePageChange(Pages.Account)}>
                                     <ListItemIcon>
                                         <AccountCircle/>
                                     </ListItemIcon>
