@@ -1,11 +1,23 @@
-import * as React        from 'react';
+import * as React           from 'react';
 import './Styles/App.css';
-import MemberSpace       from './Components/MemberSpace/MemberSpace';
-import FrontBar          from './Components/Storefront/FrontBar';
-import Login             from './Components/Storefront/Login';
-import Register          from './Components/Storefront/Register';
-import LandingPage       from './Components/Storefront/LandingPage';
-import { DisplayedPage } from './Components/Common/Vars';
+import MemberSpace          from './Components/MemberSpace/MemberSpace';
+import FrontBar             from './Components/Storefront/FrontBar';
+import Login                from './Components/Storefront/Login';
+import Register             from './Components/Storefront/Register';
+import LandingPage          from './Components/Storefront/LandingPage';
+import { DisplayedPage }    from './Components/Common/Vars';
+import { MuiThemeProvider } from 'material-ui/styles';
+import { createMuiTheme }   from 'material-ui/styles';
+import { teal, grey, red }  from 'material-ui/colors';
+
+export const theme = createMuiTheme({
+   palette: {
+        type: 'light',
+        primary: teal,
+        secondary: grey,
+        error: red
+    }
+});
 
 interface AppState {
     display: DisplayedPage;
@@ -37,6 +49,12 @@ class App extends React.Component<{}, AppState> {
         });
     }
 
+    handleSignOut = () => {
+        this.setState({
+           display: DisplayedPage.Home
+        });
+    }
+
     render() {
         let renderedElement;
         switch (this.state.display) {
@@ -58,7 +76,7 @@ class App extends React.Component<{}, AppState> {
                 break;
             case DisplayedPage.Member:
                 renderedElement = (
-                    <MemberSpace/>
+                    <MemberSpace handleSignOut={this.handleSignOut}/>
                 );
                 break;
             default:
@@ -72,7 +90,9 @@ class App extends React.Component<{}, AppState> {
 
         return (
             <div className="App">
-                {renderedElement}
+                <MuiThemeProvider theme={theme}>
+                    {renderedElement}
+                </MuiThemeProvider>
             </div>
         );
     }

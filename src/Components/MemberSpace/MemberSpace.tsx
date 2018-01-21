@@ -13,7 +13,7 @@ interface MemberState {
 }
 
 interface MemberProps {
-
+    handleSignOut(): void;
 }
 
 class MemberSpace extends React.Component<MemberProps, MemberState> {
@@ -60,8 +60,9 @@ class MemberSpace extends React.Component<MemberProps, MemberState> {
                 <Drawer
                     title={elementTitle}
                     handlePageChange={this.handlePageChange}
+                    handleSignOut={this.props.handleSignOut}
                 />
-                <main>{renderedElement}</main>
+                <main className="member">{renderedElement}</main>
             </div>
         );
     }

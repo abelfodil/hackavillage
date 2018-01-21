@@ -19,8 +19,8 @@ interface DrawerState {
 
 interface DrawerProps {
     title: string;
-
     handlePageChange(page: Pages): void;
+    handleSignOut(): void;
 }
 
 export enum Pages {
@@ -157,7 +157,7 @@ class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
                                 </ListItem>
                             </List>
                         </Collapse>
-                        <ListItem button={true}>
+                        <ListItem button={true} onClick={this.props.handleSignOut}>
                             <ListItemIcon>
                                 <ExitToApp/>
                             </ListItemIcon>
