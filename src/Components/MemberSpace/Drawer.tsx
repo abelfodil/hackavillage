@@ -28,7 +28,8 @@ export enum Pages {
     Home,
     Transport,
     Energy,
-    Settings
+    Account,
+    Privacy
 }
 
 class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
@@ -88,7 +89,7 @@ class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
                             <Divider/>
                             <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Energy)}>
                                 <ListItemIcon>
-                                    <Power />
+                                    <Power/>
                                 </ListItemIcon>
                                 <ListItemText
                                     inset={true}
@@ -97,7 +98,7 @@ class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
                             </ListItem>
                             <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Transport)}>
                                 <ListItemIcon>
-                                    <DirectionsTransit />
+                                    <DirectionsTransit/>
                                 </ListItemIcon>
                                 <ListItemText
                                     inset={true}
@@ -121,14 +122,14 @@ class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
                             {this.state.settingsOpen ? <ExpandLess/> : <ExpandMore/>}
                         </ListItem>
                         <Collapse component="li" in={this.state.settingsOpen} timeout="auto" unmountOnExit={true}>
-                            <List disablePadding={true} onClick={() => this.props.handlePageChange(Pages.Settings)}>
-                                <ListItem button={true}>
+                            <List disablePadding={true}>
+                                <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Privacy)}>
                                     <ListItemIcon>
                                         <Lock/>
                                     </ListItemIcon>
                                     <ListItemText inset={true} primary="Privacy"/>
                                 </ListItem>
-                                <ListItem button={true}>
+                                <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Account)}>
                                     <ListItemIcon>
                                         <AccountCircle/>
                                     </ListItemIcon>

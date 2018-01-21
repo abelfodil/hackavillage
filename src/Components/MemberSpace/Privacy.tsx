@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-class Settings extends React.Component {
+class Privacy extends React.Component {
     render() {
         return (
             <div className="temp">
@@ -10,4 +10,4 @@ class Settings extends React.Component {
     }
 }
 
-export default Settings;
+export default Privacy;
