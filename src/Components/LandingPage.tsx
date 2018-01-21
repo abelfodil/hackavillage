@@ -2,6 +2,15 @@ import * as React from 'react';
 import AppBar from 'material-ui/AppBar';
 import Toolbar from 'material-ui/Toolbar';
 import Button from 'material-ui/Button';
+import PieCharts from './Common/PieCharts';
+
+const data1 = [{name: 'North America', value: 40}, {name: 'Group B', value: 300},
+    {name: 'Group C', value: 300}, {name: 'Group D', value: 200},
+    {name: 'Group E', value: 278}, {name: 'Group F', value: 189}];
+
+const data2 = [{name: 'Group A', value: 2400}, {name: 'Group B', value: 4567},
+    {name: 'Group C', value: 1398}, {name: 'Group D', value: 9800},
+    {name: 'Group E', value: 3908}, {name: 'Group F', value: 4800}];
 
 class LandingPage extends React.Component {
     render() {
@@ -13,6 +22,7 @@ class LandingPage extends React.Component {
                         <Button id="register" color="contrast">Register</Button>
                     </Toolbar>
                 </AppBar>
+                <PieCharts data1={data1} data2={data2}/>
                 <h2><strong> About Hackavillage </strong></h2>
                 <p>Hackavillage is an interactive platform aiming to improve the social environment of cities around the
                     world through its contributors by using dividends. It offers a large range of solutions for smart
