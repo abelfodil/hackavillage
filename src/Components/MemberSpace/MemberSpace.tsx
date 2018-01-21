@@ -1,8 +1,12 @@
 import * as React        from 'react';
 import Drawer, { Pages } from './Drawer';
 import Transport         from './Transport';
-import Settings          from './Settings';
+import Privacy           from './Privacy';
+import Home              from './Home';
+import Energy            from './Energy';
+
 import '../../Styles/MemberSpace.css';
+import Account           from './Account';
 
 interface MemberState {
     title: string;
@@ -31,14 +35,20 @@ class MemberSpace extends React.Component<MemberProps, MemberState> {
     render() {
         let renderedElement;
         switch (this.state.choice) {
-            case Pages.Settings:
-                renderedElement = <Settings/>;
+            case Pages.Energy:
+                renderedElement = <Energy/>;
+                break;
+            case Pages.Privacy:
+                renderedElement = <Privacy/>;
+                break;
+            case Pages.Account:
+                renderedElement = <Account/>;
                 break;
             case Pages.Transport:
                 renderedElement = <Transport/>;
                 break;
             default:
-                renderedElement = <Settings/>;
+                renderedElement = <Home/>;
         }
 
         return (

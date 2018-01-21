@@ -10,7 +10,7 @@ import AppBar                                         from 'material-ui/AppBar';
 import {
     ExpandLess, ExpandMore, Home, ChevronLeft,
     Menu, Settings, Lock, AccountCircle, ExitToApp,
-    DirectionsTransit
+    DirectionsTransit, Power
 } from 'material-ui-icons';
 
 interface DrawerState {
@@ -28,7 +28,8 @@ export enum Pages {
     Home,
     Transport,
     Energy,
-    Settings
+    Account,
+    Privacy
 }
 
 class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
@@ -85,10 +86,19 @@ class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
                                     primary="Home"
                                 />
                             </ListItem>
-
+                            <Divider/>
+                            <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Energy)}>
+                                <ListItemIcon>
+                                    <Power/>
+                                </ListItemIcon>
+                                <ListItemText
+                                    inset={true}
+                                    primary="Energy"
+                                />
+                            </ListItem>
                             <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Transport)}>
                                 <ListItemIcon>
-                                    <DirectionsTransit />
+                                    <DirectionsTransit/>
                                 </ListItemIcon>
                                 <ListItemText
                                     inset={true}
@@ -96,7 +106,7 @@ class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
                                 />
                             </ListItem>
                         </List>
-
+                        <Divider/>
                         <ListItem
                             button={true}
                             onClick={() => {
@@ -111,16 +121,15 @@ class MemberSpaceDrawer extends React.Component<DrawerProps, DrawerState> {
                             <ListItemText inset={true} primary="Settings"/>
                             {this.state.settingsOpen ? <ExpandLess/> : <ExpandMore/>}
                         </ListItem>
-
                         <Collapse component="li" in={this.state.settingsOpen} timeout="auto" unmountOnExit={true}>
-                            <List disablePadding={true} onClick={() => this.props.handlePageChange(Pages.Settings)}>
-                                <ListItem button={true}>
+                            <List disablePadding={true}>
+                                <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Privacy)}>
                                     <ListItemIcon>
                                         <Lock/>
                                     </ListItemIcon>
                                     <ListItemText inset={true} primary="Privacy"/>
                                 </ListItem>
-                                <ListItem button={true}>
+                                <ListItem button={true} onClick={() => this.props.handlePageChange(Pages.Account)}>
                                     <ListItemIcon>
                                         <AccountCircle/>
                                     </ListItemIcon>
