@@ -9,7 +9,7 @@ const data1 = [{name: 'BIXI', value: 30}, {name: 'Energy', value: 25},
 class LandingPage extends React.Component {
     render() {
         return (
-            <div id="landpage">
+            <main id="landpage">
                 <h2><strong> About Hackavillage </strong></h2>
                 <p>Hackavillage is an interactive platform aiming to improve the social environment of cities around the
                     world through its contributors by using dividends. It offers a large range of solutions for smart
@@ -52,7 +52,7 @@ class LandingPage extends React.Component {
                 <p>We are a small team who wants to innovate and create an intuitive and reactive product. We have a
                     dynamic environment of thinking that aims into helping cities with their contemporary problems so
                     that the urban life of tomorrow is one that is in continuous improvement.</p>
-            </div>
+            </main>
         );
     }
 }

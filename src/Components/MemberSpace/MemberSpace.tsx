@@ -4,9 +4,9 @@ import Transport         from './Transport';
 import Privacy           from './Privacy';
 import Home              from './Home';
 import Energy            from './Energy';
+import Account           from './Account';
 
 import '../../Styles/MemberSpace.css';
-import Account           from './Account';
 
 interface MemberState {
     choice: Pages;
@@ -56,7 +56,7 @@ class MemberSpace extends React.Component<MemberProps, MemberState> {
         }
 
         return (
-            <div id="member-space">
+            <div>
                 <Drawer
                     title={elementTitle}
                     handlePageChange={this.handlePageChange}
